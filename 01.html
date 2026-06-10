@@ -6,14 +6,59 @@
             <p style="color: #555;">This is a simple HTML page.</p>
         </div>
 
-        <div style="position: absolute; width: 100%; display: flex; backdrop-filter: blur(10px); background-color: rgba(255, 225, 0, 0.25); color: #ffbf00; display: flex; justify-content: space-between;">
-            <p>
-                HHOS
+        # 상단 바
+        <div
+         style="position: absolute; width: 100%; display: flex; backdrop-filter: blur(10px);
+          background-color: rgba(0, 0, 0, 0.25); color: #000000; justify-content: space-between;
+           align-items: center; padding: 8px 16px; box-sizing: border-box; top: 0;">
+            <p
+            style="margin-left: 16px; font-weight: 700; background-color:
+             rgba(256, 256, 256, 0.125); padding: 4px 12px; border-radius: 16px;">
+            HHOS
             </p>
-            <p>
-                6/10/2026 17:13
+
+            <button style="background-color: #fff200; color: #000000;
+             border: none; padding: 8px 16px; border-radius: 8px; font-weight: 700;">
+                click me!
+            </button>
+
+            <button style="background-color: #fff200; color: #000000;
+             border: none; padding: 8px 16px; border-radius: 8px; font-weight: 700;">
+                click me!
+            </button>
+
+            <p
+            id="timeElement"
+            style="margin-right: 16px; font-weight: 700; background-color:
+             rgba(256, 256, 256, 0.125); padding: 4px 12px; border-radius: 16px;">
+             Time
             </p>
 
         </div>
+
+        # 하단 바
+        <div
+        style="position: absolute; width: 100%; display: flex; backdrop-filter: blur(10px);
+          background-color: rgba(0, 0, 0, 0.25); color: #000000; justify-content: center;
+           align-items: center; padding: 8px 16px; box-sizing: border-box; bottom: 0;">
+            <p style="margin: 0;">This is a footer.</p>
+
+        </div>
+
+        <div>
+            <img src="https://cdn.dribbble.com/userupload/42168942/file/original-b969581595e0d32050577f4f17762767.gif"
+             alt="lemon GIF" width = "300" height = "200"
+              style="position: absolute; bottom: 50%; left: 16px; border-radius: 16px;">
+        </div>
+
+        <script>
+            function updateTime(){
+                var currentTime = new Date().toLocaleString();
+                var timeText = document.getElementById("timeElement");
+                timeText.innerHTML = currentTime;
+            }
+            setInterval(updateTime, 1000);
+          
+        </script>
     </body>
 </html>
