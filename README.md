@@ -5,6 +5,5 @@ My operating system project for Hack Club Stardance.
 Goals
 
 - Booting
-- Shell
 - File system
-- search system
+- memo app
