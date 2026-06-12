@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html>
     <body style="background-image: url('https://assets.bonappetit.com/photos/5fd134d5e4009dfec306c19f/16:9/w_2560%2Cc_limit/Basically-Lemon.jpg'); background-size: cover; background-size: cover;-family: Arial, sans-serif; text-align: center;">
-        <div style="position: absolute; top: 50%; left:50%; transform: translate(-50%, -50%); padding: 16px; border: solid; width: 300px; border-radius: 16px;">
-            <h1 style="color: #000000;">HHOS!</h1>
-            <p style="color: #555;">This is a simple HTML page.</p>
+        
+
+        <div class="window" id="welcome">
+
+            <div class="windowheader" id="welcomeheader">
+            
+
+                <p style="color: #000000; font-weight: 500; margin: 0;">
+                    WELCOME
+                </p>
+
+                <p class="closebutton" id="welcomeclose">
+                  X
+                </p>
+            </div>
+           
+
+            <div style="padding: 16px; border: solid; background-color: rgba(255, 238, 0, 0.75); backdrop-filter: blur(10px);
+             width: 220px; border-radius: 16px; margin: 2px auto; text-align: center;">
+
+                <h1 style="margin: 4px; color: #000000;">HHOS!</h1>
+
+                <p style="color: #555;">Welcome to HHOS!</p>
+
+
+            </div>
+            
         </div>
 
-        # 상단 바
         <div
          style="position: absolute; width: 100%; display: flex; backdrop-filter: blur(10px);
           background-color: rgba(0, 0, 0, 0.25); color: #000000; justify-content: space-between;
@@ -17,10 +40,12 @@
             HHOS
             </p>
 
-            <button style="background-color: #fff200; color: #000000;
-             border: none; padding: 8px 16px; border-radius: 8px; font-weight: 700;">
-                click me to START!
-            </button>
+            <p id="welcomeopen"
+             style="background-color: #fff200; color: #000000;
+             border: none; padding: 8px 16px; border-radius: 8px; font-weight: 700;
+             cursor: pointer;">
+                Open Welcome Screen
+            </p>
 
             <p
             id="timeElement"
@@ -31,7 +56,6 @@
 
         </div>
 
-        # 하단 바
         <div
         style="position: absolute; width: 100%; display: flex; backdrop-filter: blur(10px);
           background-color: rgba(0, 0, 0, 0.25); color: #000000; justify-content: center;
@@ -45,15 +69,10 @@
              alt="lemon GIF" width = "300" height = "200"
               style="position: absolute; bottom: 50%; left: 16px; border-radius: 16px;">
         </div>
+        
+        <link rel="stylesheet" type="text/css" href="style.css" />x 
 
-        <script>
-            function updateTime(){
-                var currentTime = new Date().toLocaleString();
-                var timeText = document.getElementById("timeElement");
-                timeText.innerHTML = currentTime;
-            }
-            setInterval(updateTime, 1000);
-          
-        </script>
+        <script src="script.js"></script>
+
     </body>
 </html>
